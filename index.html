@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CUSPACK — Custom Packaging untuk Brand Lokal dan UMKM</title>
+<meta name="description" content="Temukan solusi custom packaging untuk skincare, kosmetik, haircare, dan kebutuhan bisnis Anda. Konsultasikan spesifikasi kemasan bersama CUSPACK.">
+<meta property="og:title" content="CUSPACK — Custom Packaging untuk Brand Lokal dan UMKM">
+<meta property="og:description" content="Custom packaging untuk skincare, kosmetik, haircare, dan bodycare.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Fraunces:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{--g:#174F43;--t:#216B5C;--sage:#A7B9A0;--ivory:#F8F5F0;--beige:#E9DED2;--ink:#26342F;--card:#fff;--line:rgba(38,52,47,.12);--blush:#E8CFC8;--muted:#5d6b65;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 120px)}
+*,*::before,*::after{box-sizing:border-box}
+html,body{height:auto;margin:0}
+body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:var(--ivory);color:var(--ink);line-height:1.6;overflow-x:hidden}
+img,svg{max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+:focus-visible{outline:3px solid var(--sage);outline-offset:2px}
+.wrap{max-width:1280px;margin:0 auto;padding:0 20px}
+h1,h2,h3{line-height:1.15;margin:0}
+h2{font-size:clamp(1.6rem,3vw,2.3rem);font-weight:700;letter-spacing:-.02em}
+.serif{font-family:'Fraunces',Georgia,serif;font-style:italic;font-weight:500}
+section{padding:64px 0}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border-radius:12px;font-weight:600;transition:transform .2s,background .2s,box-shadow .2s;min-height:44px}
+.btn.p{background:var(--g);color:#fff}.btn.p:hover{background:var(--t);transform:translateY(-2px);box-shadow:0 8px 20px rgba(23,79,67,.25)}
+.btn.s{border:1.5px solid var(--g);color:var(--g)}.btn.s:hover{background:var(--g);color:#fff}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:0 4px 18px rgba(38,52,47,.06)}
+/* header */
+.top{background:#174F43;color:#fff;font-size:.8rem;padding:7px 0}
+.top .wrap{display:flex;justify-content:space-between;gap:16px;overflow-x:auto;white-space:nowrap;scrollbar-width:none}
+header.main{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--ivory);transition:box-shadow .3s,background .3s}
+header.main.sc{box-shadow:0 6px 24px rgba(0,0,0,.1);background:color-mix(in srgb,var(--ivory) 92%,transparent);backdrop-filter:blur(10px)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--ivory)}
+.nav{display:flex;align-items:center;gap:20px;padding:12px 0}
+.logo{font-weight:700;font-size:1.5rem;letter-spacing:.04em;color:var(--g);display:flex;align-items:center;gap:8px}
+.search{flex:1;max-width:360px;position:relative}
+.search input{width:100%;padding:11px 16px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:inherit}
+.menu{display:flex;gap:4px;align-items:center}
+.menu>a,.dd>button{padding:10px 12px;border-radius:8px;font-weight:500;font-size:.93rem}
+.menu>a:hover,.dd>button:hover{background:var(--beige)}
+.dd{position:relative}
+.dd ul{position:absolute;top:100%;left:0;min-width:220px;list-style:none;margin:0;padding:8px;background:var(--card);border:1px solid var(--line);border-radius:12px;box-shadow:0 14px 30px rgba(0,0,0,.12);opacity:0;visibility:hidden;transform:translateY(8px);transition:.2s}
+.dd:hover ul,.dd:focus-within ul,.dd.open ul{opacity:1;visibility:visible;transform:none}
+.dd li button{width:100%;text-align:left;padding:9px 12px;border-radius:8px}.dd li button:hover{background:var(--beige)}
+.icons{display:flex;gap:4px;margin-left:auto}
+.ib{position:relative;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;transition:background .2s}
+.ib:hover{background:var(--beige)}
+.bd{position:absolute;top:2px;right:0;background:var(--g);color:#fff;border-radius:99px;font-size:.68rem;min-width:18px;height:18px;display:grid;place-items:center;padding:0 4px}
+.burger{display:none}
+@media(max-width:1000px){.burger{display:grid}.menu{display:none;position:absolute;left:0;right:0;top:100%;background:var(--ivory);flex-direction:column;align-items:stretch;padding:12px 20px;border-bottom:1px solid var(--line)}.menu.open{display:flex}.dd ul{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;border:0;display:none}.dd:focus-within ul,.dd.open ul{display:block}.search{order:5;flex-basis:100%;max-width:none}.nav{flex-wrap:wrap;position:relative}.top span:nth-child(n+3){display:none}}
+/* hero */
+.hero{padding:40px 0 56px;background:radial-gradient(circle at 85% 20%,var(--beige),transparent 55%)}
+.hs{display:none;grid-template-columns:1.05fr 1fr;gap:40px;align-items:center}
+.hs.on{display:grid;animation:in .7s both}
+@keyframes in{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.tag{display:inline-block;font-size:.75rem;letter-spacing:.14em;font-weight:600;color:var(--t);margin-bottom:14px}
+.hero h1{font-size:clamp(2rem,4.6vw,3.6rem);font-weight:700;letter-spacing:-.03em}
+.hero p.lead{font-size:1.08rem;color:var(--muted);max-width:520px;margin:18px 0 26px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.perks{display:flex;gap:10px 22px;flex-wrap:wrap;margin-top:28px;font-size:.88rem;font-weight:500}
+.perks span{display:flex;gap:6px;align-items:center}.perks i{color:var(--t);font-style:normal}
+.art{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.art div{border-radius:16px;aspect-ratio:3/4;display:grid;place-items:center;padding:10px;transition:transform .4s}
+.art div:nth-child(2){transform:translateY(24px)}.art div:nth-child(5){transform:translateY(-12px)}
+.art div:hover{transform:translateY(-6px)}
+.dots{display:flex;gap:8px;margin-top:28px}
+.dots button{width:10px;height:10px;border-radius:99px;background:var(--sage);transition:width .3s,background .3s;padding:0}
+.dots button.on{width:32px;background:var(--g)}
+@media(max-width:860px){.hs.on{grid-template-columns:1fr}.art div:nth-child(n){transform:none}}
+/* catalog */
+.cat{display:grid;grid-template-columns:260px 1fr;gap:28px;align-items:start}
+.side{position:sticky;top:130px;display:flex;flex-direction:column;gap:16px}
+.side ul{list-style:none;margin:0;padding:10px}
+.side li button{width:100%;display:flex;gap:10px;align-items:center;padding:10px 12px;border-radius:10px;text-align:left;font-size:.92rem;transition:.2s}
+.side li button:hover{background:var(--beige);padding-left:16px}
+.side li button.on{background:var(--g);color:#fff}
+.promo{background:var(--sage);color:#17302a;padding:20px;border-radius:14px}.promo h3{font-size:1.1rem;margin-bottom:6px}.promo p{font-size:.88rem;margin:0 0 14px}
+.bar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:20px}
+select{padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:inherit}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.grid.three{grid-template-columns:repeat(3,1fr)}
+@media(max-width:1180px){.grid{grid-template-columns:repeat(3,1fr)}.grid.three{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:860px){.cat{grid-template-columns:1fr}.side{position:static}.side ul{display:flex;overflow-x:auto;gap:6px;scrollbar-width:none}.side li{flex:none}.side li button{white-space:nowrap;border:1px solid var(--line)}.promo{display:none}.grid,.grid.three{grid-template-columns:repeat(2,1fr);gap:12px}}
+@media(max-width:340px){.grid,.grid.three{grid-template-columns:1fr}}
+.pc{overflow:hidden;display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s}
+.pc:hover{transform:translateY(-5px);box-shadow:0 16px 32px rgba(38,52,47,.14)}
+.pi{position:relative;aspect-ratio:1;display:grid;place-items:center;overflow:hidden;cursor:pointer}
+.pi svg{width:62%;transition:transform .4s}.pc:hover .pi svg{transform:scale(1.08)}
+.badge{position:absolute;top:10px;left:10px;background:var(--g);color:#fff;font-size:.72rem;padding:3px 10px;border-radius:99px;font-weight:600}
+.wl{position:absolute;top:8px;right:8px;width:38px;height:38px;border-radius:50%;background:var(--card);display:grid;place-items:center;transition:transform .2s}
+.wl:hover{transform:scale(1.12)}.wl.on svg{fill:#c4574a;stroke:#c4574a}
+.pb{padding:14px;display:flex;flex-direction:column;gap:6px;flex:1}
+.pb h3{font-size:1rem}.pb small{color:var(--muted)}
+.pr{font-weight:700;color:var(--g)}
+.row{display:flex;gap:8px;margin-top:auto;padding-top:8px}
+.row .btn{padding:9px 10px;font-size:.82rem;flex:1;justify-content:center}
+.note{font-size:.78rem;color:var(--muted)}
+/* showcase */
+.sc4{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+@media(max-width:700px){.sc4{grid-template-columns:1fr}}
+.sk{display:grid;grid-template-columns:1fr 150px;align-items:center;padding:26px;border-radius:16px;overflow:hidden;min-height:200px}
+.sk svg{width:130px;transition:transform .5s}.sk:hover svg{transform:translateX(-8px) scale(1.06)}
+.sk h3{font-size:1.25rem;margin-bottom:6px}.sk p{font-size:.9rem;margin:0 0 14px;opacity:.85}
+.why{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+@media(max-width:860px){.why{grid-template-columns:repeat(2,1fr)}}@media(max-width:520px){.why{grid-template-columns:1fr}}
+.why div{padding:22px}.why b{display:block;margin:10px 0 4px}.why p{margin:0;color:var(--muted);font-size:.9rem}
+.ico{width:46px;height:46px;border-radius:12px;background:var(--beige);display:grid;place-items:center;font-size:1.3rem}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:32px;position:relative}
+.steps::before{content:"";position:absolute;top:26px;left:12%;right:12%;border-top:2px dashed var(--sage)}
+@media(max-width:860px){.steps{grid-template-columns:1fr}.steps::before{display:none}}
+.st{text-align:center;position:relative;padding:0 8px}.st .n{width:52px;height:52px;margin:0 auto 12px;border-radius:50%;background:var(--g);color:#fff;display:grid;place-items:center;font-weight:700;font-size:1.2rem}
+.st p{color:var(--muted);font-size:.9rem;margin:6px 0 0}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}
+.chips button{padding:8px 16px;border-radius:99px;border:1px solid var(--line);background:var(--card);font-size:.88rem;transition:.2s}
+.chips button.on,.chips button:hover{background:var(--g);color:#fff}
+.gal{columns:3 220px;column-gap:14px}
+.gi{break-inside:avoid;margin-bottom:14px;border-radius:14px;position:relative;overflow:hidden;display:grid;place-items:center}
+.gi svg{width:46%;transition:transform .5s}.gi:hover svg{transform:scale(1.1)}
+.gi span{position:absolute;inset:auto 0 0;padding:12px;background:linear-gradient(transparent,rgba(23,79,67,.85));color:#fff;font-size:.88rem;font-weight:600;opacity:0;transition:.3s}.gi:hover span,.gi:focus span{opacity:1}
+.custom{display:grid;grid-template-columns:1fr 1fr;gap:32px;padding:32px;background:var(--beige);border-radius:20px}
+@media(max-width:860px){.custom{grid-template-columns:1fr;padding:20px}}
+.prev{background:var(--card);border-radius:16px;display:grid;place-items:center;min-height:260px}.prev svg{width:150px}
+.sw{display:flex;gap:10px;margin:10px 0 16px}.sw button{width:34px;height:34px;border-radius:50%;border:2px solid var(--card);box-shadow:0 0 0 1px var(--line)}.sw button.on{box-shadow:0 0 0 3px var(--g)}
+.faq details{border-bottom:1px solid var(--line);padding:16px 0}
+.faq summary{font-weight:600;cursor:pointer;display:flex;justify-content:space-between;gap:12px;list-style:none}.faq summary::after{content:"+";font-size:1.4rem;transition:transform .3s}.faq details[open] summary::after{transform:rotate(45deg)}
+.faq p{margin:10px 0 0;color:var(--muted);max-width:720px}
+.tests{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:24px}@media(max-width:860px){.tests{grid-template-columns:1fr}}
+.tests div{padding:22px}.tests q{display:block;margin-bottom:12px}
+.ctab{background:var(--g);color:#fff;border-radius:22px;padding:52px 28px;text-align:center}
+.ctab p{max-width:520px;margin:12px auto 24px;opacity:.9}.ctab .btn.s{border-color:#fff;color:#fff}.ctab .btn.p{background:#fff;color:var(--g)}
+form label{display:block;font-weight:600;font-size:.88rem;margin-top:12px}
+form input,form textarea,form select{width:100%;margin-top:4px;padding:11px 12px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:inherit}
+.err{color:#b3392b;font-size:.8rem;min-height:1em}
+footer{background:#12302a;color:#e6efe9;padding:48px 0 24px}
+.fg{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:28px}@media(max-width:860px){.fg{grid-template-columns:1fr 1fr}}@media(max-width:520px){.fg{grid-template-columns:1fr}}
+footer h4{margin:0 0 10px}footer ul{list-style:none;margin:0;padding:0}footer li{padding:4px 0;font-size:.9rem;opacity:.85}footer a:hover{text-decoration:underline}
+.wa{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:40;background:#25D366;color:#fff;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;box-shadow:0 8px 22px rgba(0,0,0,.25);transition:transform .2s}.wa:hover{transform:scale(1.08)}
+/* overlays */
+.ov{position:fixed;inset:0;background:rgba(10,20,16,.55);z-index:80;opacity:0;visibility:hidden;transition:.25s}.ov.on{opacity:1;visibility:visible}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(420px,100%);background:var(--ivory);z-index:90;transform:translateX(100%);transition:transform .3s;display:flex;flex-direction:column;padding:18px;padding-top:calc(18px + env(safe-area-inset-top,0px))}
+.drawer.on{transform:none}
+.items{flex:1;overflow:auto}
+.ci{display:grid;grid-template-columns:64px 1fr auto;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}
+.ci .t{width:64px;height:64px;border-radius:10px;display:grid;place-items:center}.ci .t svg{width:70%}
+.qty{display:flex;align-items:center;gap:8px;margin-top:4px}.qty button{width:30px;height:30px;border-radius:8px;border:1px solid var(--line)}
+.modal{position:fixed;left:50%;top:50%;width:min(760px,94%);max-height:90vh;overflow:auto;transform:translate(-50%,-48%);opacity:0;visibility:hidden;z-index:90;transition:.25s;background:var(--ivory);border-radius:18px;padding:22px}
+.modal.on{opacity:1;visibility:visible;transform:translate(-50%,-50%)}
+.mg{display:grid;grid-template-columns:1fr 1fr;gap:22px}@media(max-width:640px){.mg{grid-template-columns:1fr}}
+.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,30px);background:var(--ink);color:var(--ivory);padding:12px 20px;border-radius:12px;z-index:100;opacity:0;transition:.3s;pointer-events:none;font-size:.9rem}.toast.on{opacity:1;transform:translate(-50%,0)}
+.rv{opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s}.rv.in{opacity:1;transform:none}
+@media(max-width:600px){section{padding:44px 0}.wrap{padding:0 16px}.top{font-size:.72rem}.hero{padding:24px 0 36px}.logo{font-size:1.25rem}.cta .btn{flex:1;justify-content:center}.perks{font-size:.8rem}.art{gap:8px}.art div:nth-child(n){transform:none;aspect-ratio:1;padding:6px;border-radius:12px}.side li button{padding:8px 12px;font-size:.85rem}.row{flex-direction:column}.pb{padding:10px}.pb h3{font-size:.92rem}.sk{grid-template-columns:1fr 100px;padding:18px}.sk svg{width:90px}.ctab{padding:36px 18px}.custom{padding:18px}.drawer{width:100%}.modal{padding:16px}.gal{columns:2 140px}.faq summary{font-size:.95rem}input,select,textarea{font-size:16px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="top"><div class="wrap"><span>🚚 Pengiriman ke seluruh Indonesia</span><span>✔ Kontrol kualitas</span><span>✎ Konsultasi desain kemasan</span><span>◈ Custom sesuai kebutuhan brand</span></div></div>
+<header class="main" id="hd"><div class="wrap nav">
+<a class="logo" href="#beranda" aria-label="CUSPACK beranda"><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><rect x="3" y="8" width="22" height="17" rx="3" fill="currentColor"/><path d="M14 8C14 3 20 2 23 4 22 8 18 9 14 8Z" fill="#A7B9A0"/></svg>CUSPACK</a>
+<div class="search"><input id="q" type="search" placeholder="Cari produk atau kategori…" aria-label="Cari produk"></div>
+<nav class="menu" id="menu" aria-label="Navigasi utama">
+<a href="#beranda">Beranda</a>
+<div class="dd"><button aria-haspopup="true">Produk ▾</button><ul id="ddp"></ul></div>
+<div class="dd"><button aria-haspopup="true">Kategori ▾</button><ul id="ddk"></ul></div>
+<a href="#tentang">Tentang Kami</a><a href="#pemesanan">Cara Pemesanan</a><a href="#kontak">Kontak</a></nav>
+<div class="icons">
+<button class="ib" id="wlb" aria-label="Wishlist">♡<span class="bd" id="wc">0</span></button>
+<button class="ib" aria-label="Masuk atau daftar (belum tersedia)" onclick="toast('Fitur akun belum tersedia pada versi frontend ini.')">☺</button>
+<button class="ib" id="cb" aria-label="Buka keranjang">🛍<span class="bd" id="cc">0</span></button>
+<button class="ib burger" id="bg" aria-label="Buka menu" aria-expanded="false">☰</button></div>
+</div></header>
+
+<main id="beranda">
+<section class="hero"><div class="wrap">
+<div id="slides"></div><div class="dots" id="dots"></div></div></section>
+
+<section id="katalog" style="padding-top:24px"><div class="wrap">
+<h2 class="rv">Produk Terlaris</h2>
+<p class="note rv" style="margin:6px 0 22px">Harga contoh untuk demonstrasi. Harga final bergantung pada material, jumlah pesanan, dan kebutuhan custom.</p>
+<div class="cat"><aside class="side" aria-label="Kategori"><div class="card"><ul id="side"></ul></div>
+<div class="promo"><h3>Gratis Konsultasi Desain</h3><p>Ceritakan kebutuhan kemasan Anda dan temukan solusi yang sesuai dengan karakter brand.</p><button class="btn p" data-wa="Halo CUSPACK, saya ingin konsultasi desain kemasan.">Konsultasi Sekarang</button></div></aside>
+<div><div class="bar"><span id="cnt" class="note" aria-live="polite"></span><label>Urutkan <select id="sort"><option value="">Default</option><option value="n">Nama A–Z</option><option value="pa">Harga terendah</option><option value="pd">Harga tertinggi</option></select></label></div>
+<div class="grid" id="grid"></div></div></div></div></section>
+
+<section><div class="wrap"><h2 class="rv">Kategori Unggulan</h2><div class="sc4" id="showcase" style="margin-top:24px"></div></div></section>
+
+<section id="tentang" style="background:var(--beige)"><div class="wrap"><h2 class="rv">Mengapa Memilih CUSPACK</h2>
+<div class="why" id="why"></div><p class="note" style="margin-top:18px">Tidak ada klaim sertifikasi atau kapasitas produksi pada halaman ini; spesifikasi dikonfirmasi langsung oleh tim.</p></div></section>
+
+<section id="pemesanan"><div class="wrap"><h2 class="rv">Cara Pemesanan</h2><div class="steps" id="steps"></div></div></section>
+
+<section style="background:var(--beige)"><div class="wrap"><h2 class="rv">Inspirasi Kemasan</h2><div class="chips" id="gf"></div><div class="gal" id="gal"></div></div></section>
+
+<section><div class="wrap"><div class="custom">
+<div><h2>Jadikan Kemasan Bagian dari Identitas Brand Anda</h2>
+<p style="color:var(--muted)">Dari pemilihan warna hingga penempatan logo, kami membantu Anda merencanakan tampilan kemasan yang sesuai dengan kebutuhan bisnis.</p>
+<div class="prev" id="prev" aria-label="Preview mockup kemasan"></div>
+<div class="sw" id="sw" role="group" aria-label="Pilihan warna"></div>
+<div class="chips" id="pt" style="margin:0" role="group" aria-label="Jenis kemasan"></div>
+<p class="note">Preview ini ilustrasi; bukan editor desain dan tidak menyimpan apa pun.</p></div>
+<form id="cf" novalidate aria-label="Formulir konsultasi"><h3>Diskusikan Desain Anda</h3>
+<label for="fn">Nama</label><input id="fn" autocomplete="name"><div class="err" id="e1"></div>
+<label for="fw">Nomor WhatsApp</label><input id="fw" inputmode="tel" autocomplete="tel" placeholder="08xxxxxxxxxx"><div class="err" id="e2"></div>
+<label for="fk">Jenis kemasan</label><select id="fk"></select>
+<label for="fm">Kebutuhan Anda</label><textarea id="fm" rows="3"></textarea><div class="err" id="e3"></div>
+<button class="btn p" type="submit" style="margin-top:8px">Diskusikan Desain Anda</button>
+<p class="note">Data tidak dikirim ke server. Setelah valid, Anda diarahkan ke WhatsApp dengan pesan yang sudah terisi.</p></form></div></div></section>
+
+<section style="background:var(--beige)"><div class="wrap"><h2 class="rv">Temukan Packaging yang Tepat untuk Brand Anda</h2>
+<div class="chips" id="rf"></div><div class="grid three" id="rg"></div>
+<div style="text-align:center;margin-top:22px"><a class="btn s" href="#katalog" onclick="setCat('all')">Lihat Semua Produk</a></div></div></section>
+
+<section><div class="wrap"><h2 class="rv">Testimoni dan Kepercayaan</h2>
+<p class="note">Contoh placeholder untuk tahap development — bukan testimoni pelanggan nyata. Ganti dengan data asli sebelum rilis.</p>
+<div class="tests" id="tests"></div></div></section>
+
+<section style="background:var(--beige)" id="faq"><div class="wrap" style="max-width:860px"><h2 class="rv">Pertanyaan yang Sering Diajukan</h2><div class="faq" id="faqs" style="margin-top:18px"></div></div></section>
+
+<section id="kontak"><div class="wrap"><div class="ctab"><h2>Siap Membuat Kemasan yang Mewakili Brand Anda?</h2><p>Ceritakan kebutuhan packaging Anda dan dapatkan rekomendasi solusi yang sesuai.</p>
+<div class="cta" style="justify-content:center"><button class="btn p" data-wa="Halo CUSPACK, saya ingin memulai konsultasi kemasan.">Mulai Konsultasi</button><a class="btn s" href="#katalog">Lihat Katalog</a></div></div></div></section>
+</main>
+
+<footer><div class="wrap"><div class="fg">
+<div><div class="logo" style="color:#fff">CUSPACK</div><p style="font-size:.9rem;opacity:.85">Custom Packaging, Crafted for Your Brand. Solusi kemasan kosmetik, skincare, dan personal care untuk brand lokal, UMKM, dan perusahaan.</p><p style="font-size:.85rem">Instagram · TikTok · LinkedIn <em>(tautan placeholder)</em></p></div>
+<div><h4>Navigasi</h4><ul><li><a href="#beranda">Beranda</a></li><li><a href="#tentang">Tentang Kami</a></li><li><a href="#katalog">Katalog Produk</a></li><li><a href="#portofolio">Portofolio</a></li><li><a href="#kontak">Kontak</a></li></ul></div>
+<div><h4>Kategori</h4><ul id="fcat"></ul></div>
+<div><h4>Bantuan</h4><ul><li><a href="#pemesanan">Cara Pemesanan</a></li><li><a href="#faq">FAQ</a></li><li>Kebijakan Privasi</li><li>Syarat dan Ketentuan</li><li>Informasi Pengiriman</li></ul></div></div>
+<p style="margin-top:28px;font-size:.82rem;opacity:.75;border-top:1px solid rgba(255,255,255,.15);padding-top:16px">Kontak (placeholder): [alamat], [email@domain], [nomor telepon] — konfigurasi pada objek CONFIG. © 2026 CUSPACK. Keranjang &amp; wishlist tersimpan di browser (localStorage), bukan sistem transaksi online.</p></div></footer>
+
+<button class="wa" id="waf" aria-label="Chat WhatsApp"><svg width="28" height="28" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm5.2 14c-.2.6-1.300 1.200-1.800 1.200-.5.1-1 .2-3.200-.7-2.700-1.100-4.400-3.800-4.500-4-.1-.2-1.100-1.400-1.100-2.700s.7-1.900.9-2.200c.2-.2.500-.3.700-.3h.5c.2 0 .4 0 .6.500l.8 2c.1.200.1.300 0 .5l-.4.500c-.1.200-.3.300-.1.600.2.300.8 1.300 1.700 2 1.100 1 2.100 1.300 2.400 1.400.3.100.4.100.6-.1l.8-1c.2-.2.400-.2.600-.1l1.900.9c.3.100.5.200.5.300.1.200.1.800-.1 1.400Z"/></svg></button>
+
+<div class="ov" id="ov"></div>
+<aside class="drawer" id="drawer" aria-label="Keranjang" role="dialog"><div style="display:flex;justify-content:space-between;align-items:center"><h3>Keranjang</h3><button class="ib" id="cx" aria-label="Tutup">✕</button></div>
+<div class="items" id="items"></div><div id="tot" style="padding-top:12px"></div>
+<button class="btn p" id="co" style="justify-content:center;margin-top:10px">Minta Penawaran via WhatsApp</button>
+<p class="note">Ini daftar permintaan penawaran, bukan checkout. Tidak ada pesanan yang dibuat.</p></aside>
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Detail produk"></div>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+const CONFIG={wa:"" /* isi nomor internasional tanpa +, mis. 62xxxxxxxxxx */};
+const $=s=>document.querySelector(s),rp=n=>"Rp"+n.toLocaleString("id-ID");
+const COLORS=["#E8CFC8","#A7B9A0","#E9DED2","#F8F5F0","#216B5C"];
+const CATS=[["all","Semua Produk","▦"],["skincare","Skincare Packaging","✿"],["cosmetic","Cosmetic Packaging","◐"],["haircare","Haircare Packaging","≋"],["bodycare","Bodycare & Fragrance","◒"],["bottle","Bottle & Jar","⚗"],["tube","Tube Packaging","▮"],["box","Box & Paper Packaging","▣"]];
+const P=[
+{id:1,n:"Custom Cosmetic Jar 50g",t:"jar",c:0,s:"50 g · logo & warna tutup",pr:18000,moq:100,b:"Terlaris",tags:["skincare","bottle"]},
+{id:2,n:"Custom Tube Packaging 30–100ml",t:"tube",c:1,s:"30–100 ml · cetak logo",pr:12000,moq:200,b:"Custom",tags:["skincare","tube"]},
+{id:3,n:"Custom Serum Bottle 30ml",t:"serum",c:2,s:"30 ml · dropper",pr:15000,moq:100,b:"Baru",tags:["skincare","bottle"]},
+{id:4,n:"Custom Compact Powder",t:"compact",c:0,s:"Ukuran sesuai kebutuhan",pr:null,moq:100,b:"Custom",tags:["cosmetic"]},
+{id:5,n:"Custom Pump Bottle",t:"pump",c:1,s:"100–250 ml",pr:14000,moq:200,b:"Terlaris",tags:["haircare","bottle"]},
+{id:6,n:"Custom Skincare Box",t:"box",c:3,s:"Dimensi custom · kertas",pr:6500,moq:300,b:"Custom",tags:["skincare","box"]},
+{id:7,n:"Custom Lip Balm Tube 10g",t:"lip",c:2,s:"10 g · cetak logo",pr:7000,moq:300,b:"Baru",tags:["cosmetic","tube"]},
+{id:8,n:"Custom Perfume Bottle 50ml",t:"perf",c:1,s:"50 ml · tutup & label custom",pr:null,moq:200,b:"Custom",tags:["bodycare","bottle"]}];
+const G={skincare:"Skincare",cosmetic:"Kosmetik",haircare:"Haircare",bodycare:"Bodycare"};
+function svg(t,c,w){const k="#174F43",l='<rect x="30" y="52" width="40" height="14" rx="3" fill="#fff" opacity=".7"/>';const f=c;
+const m={lip:`<rect x="34" y="8" width="32" height="30" rx="6" fill="${k}"/><rect x="30" y="38" width="40" height="50" rx="7" fill="${f}" stroke="${k}" stroke-opacity=".25"/><rect x="38" y="54" width="24" height="12" rx="3" fill="#fff" opacity=".7"/>`,perf:`<rect x="38" y="6" width="24" height="16" rx="4" fill="${k}"/><rect x="46" y="22" width="8" height="8" fill="${k}"/><rect x="20" y="30" width="60" height="58" rx="10" fill="${f}" stroke="${k}" stroke-opacity=".25"/><rect x="34" y="52" width="32" height="16" rx="3" fill="#fff" opacity=".7"/>`,jar:`<rect x="22" y="20" width="56" height="16" rx="4" fill="${k}"/><rect x="18" y="36" width="64" height="46" rx="9" fill="${f}" stroke="${k}" stroke-opacity=".25"/>${l}`,
+tube:`<rect x="38" y="8" width="24" height="14" rx="3" fill="${k}"/><path d="M28 22h44l-4 64H32z" fill="${f}" stroke="${k}" stroke-opacity=".25"/><rect x="33" y="86" width="34" height="6" rx="1" fill="${k}"/>`,
+serum:`<rect x="43" y="6" width="14" height="18" rx="6" fill="${k}"/><rect x="38" y="24" width="24" height="9" fill="${k}"/><rect x="28" y="33" width="44" height="56" rx="9" fill="${f}" stroke="${k}" stroke-opacity=".25"/>${l.replace('y="52"','y="55"')}`,
+compact:`<rect x="12" y="44" width="76" height="38" rx="14" fill="${f}" stroke="${k}" stroke-opacity=".25"/><rect x="12" y="28" width="76" height="22" rx="11" fill="${k}"/><circle cx="50" cy="63" r="13" fill="#fff" opacity=".6"/>`,
+pump:`<rect x="36" y="6" width="28" height="7" rx="3" fill="${k}"/><rect x="47" y="13" width="6" height="12" fill="${k}"/><rect x="40" y="25" width="22" height="8" fill="${k}"/><rect x="28" y="33" width="46" height="56" rx="9" fill="${f}" stroke="${k}" stroke-opacity=".25"/>${l.replace('y="52"','y="56"')}`,
+box:`<rect x="16" y="44" width="68" height="42" rx="3" fill="${f}" stroke="${k}" stroke-opacity=".25"/><rect x="12" y="32" width="76" height="16" rx="3" fill="${k}"/><rect x="34" y="58" width="32" height="14" rx="3" fill="#fff" opacity=".7"/>`,
+bag:`<path d="M24 34h52l5 54H19z" fill="${f}" stroke="${k}" stroke-opacity=".25"/><path d="M38 34c0-22 24-22 24 0" fill="none" stroke="${k}" stroke-width="3"/><rect x="36" y="56" width="28" height="14" rx="3" fill="#fff" opacity=".7"/>`,
+food:`<rect x="14" y="54" width="72" height="32" rx="7" fill="${f}" stroke="${k}" stroke-opacity=".25"/><path d="M14 54Q50 8 86 54Z" fill="#fff" opacity=".6" stroke="${k}" stroke-opacity=".4"/>`};
+return `<svg viewBox="0 0 100 100" role="img" aria-label="Ilustrasi ${t}" ${w?`style="width:${w}"`:""}>${m[t]}</svg>`}
+const ST=k=>{try{return JSON.parse(localStorage.getItem(k))||{}}catch(e){return{}}},SV=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}};
+let cart=ST("cp_cart"),wl=ST("cp_wl"),cat="all",q="",sort="";
+function toast(m){const t=$("#toast");t.textContent=m;t.classList.add("on");clearTimeout(toast.h);toast.h=setTimeout(()=>t.classList.remove("on"),2400)}
+function wa(msg){const u="https://wa.me/"+(CONFIG.wa||"")+"?text="+encodeURIComponent(msg);if(!CONFIG.wa)toast("Nomor WhatsApp belum dikonfigurasi (CONFIG.wa). Membuka WhatsApp tanpa tujuan.");window.open(u,"_blank","noopener")}
+document.addEventListener("click",e=>{const b=e.target.closest("[data-wa]");if(b)wa(b.dataset.wa)});
+$("#waf").onclick=()=>wa("Halo CUSPACK, saya ingin bertanya tentang custom packaging.");
+/* header */
+addEventListener("scroll",()=>$("#hd").classList.toggle("sc",scrollY>20),{passive:true});
+$("#bg").onclick=()=>{const o=$("#menu").classList.toggle("open");$("#bg").setAttribute("aria-expanded",o)};
+$("#menu").addEventListener("click",e=>{if(e.target.closest("a"))$("#menu").classList.remove("open")});
+document.querySelectorAll(".dd>button").forEach(b=>b.onclick=()=>{const d=b.parentElement,o=d.classList.contains("open");document.querySelectorAll(".dd").forEach(x=>x.classList.remove("open"));if(!o)d.classList.add("open")});document.addEventListener("click",e=>{if(!e.target.closest(".dd"))document.querySelectorAll(".dd").forEach(x=>x.classList.remove("open"))});
+function ddFill(id,list){$(id).innerHTML=list.map(c=>`<li><button data-c="${c[0]}">${c[1]}</button></li>`).join("")}
+ddFill("#ddp",CATS.slice(0,5));ddFill("#ddk",CATS.slice(5));
+document.addEventListener("click",e=>{const b=e.target.closest(".dd [data-c]");if(b){setCat(b.dataset.c);$("#katalog").scrollIntoView();document.activeElement.blur();document.querySelectorAll(".dd").forEach(x=>x.classList.remove("open"));$("#menu").classList.remove("open")}});
+$("#q").addEventListener("input",e=>{q=e.target.value.trim().toLowerCase();render()});
+$("#q").addEventListener("keydown",e=>{if(e.key==="Enter")$("#katalog").scrollIntoView()});
+/* hero */
+const SL=[["Custom Packaging untuk Brand Lokal","Custom Packaging untuk Brand yang Ingin Tampil Berbeda","Wujudkan identitas brand Anda melalui kemasan berkualitas dengan desain custom, pilihan material beragam, dan solusi produksi yang fleksibel untuk bisnis Anda.","Jelajahi Produk",["jar","serum","tube","pump","compact","box"]],
+["Kemasan Premium untuk Skincare & Kosmetik","Kemasan Premium untuk Skincare & Kosmetik","Jar, botol serum, tube, dan compact dengan finishing yang membuat produk Anda tampil layak di rak maupun di layar.","Lihat Skincare",["serum","jar","compact","tube","box","pump"]],
+["Solusi Packaging untuk UMKM","Solusi Packaging untuk UMKM","Mulai dari kuantitas yang realistis untuk bisnis Anda. Tim kami membantu memilih spesifikasi yang sesuai anggaran.","Lihat Box Packaging",["box","perf","lip","jar","tube","pump"]]];
+const PER=[["Custom Design"],["MOQ Fleksibel"],["Material Berkualitas"],["Pengiriman ke Seluruh Indonesia"]];
+$("#slides").innerHTML=SL.map((s,i)=>`<div class="hs" aria-label="Slide ${i+1}"><div><span class="tag">YOUR BRAND, YOUR PACKAGING</span><h1>${s[1].replace(/(Berbeda|Skincare & Kosmetik|UMKM)/,m=>m)}</h1><p class="lead">${s[2]}</p><div class="cta"><a class="btn p" href="#katalog" ${i==1?'onclick="setCat(\'skincare\')"':i==2?'onclick="setCat(\'box\')"':""}>${s[3]}</a><button class="btn s" data-wa="Halo CUSPACK, saya ingin konsultasi gratis.">Konsultasi Gratis</button></div><div class="perks">${PER.map(p=>`<span><i>✔</i>${p[0]}</span>`).join("")}</div></div><div class="art">${s[4].map((t,j)=>`<div style="background:${["#E8CFC8","#E9DED2","#A7B9A0"][(i+j)%3]}">${svg(t,["#F8F5F0","#fff","#E8CFC8"][j%3])}</div>`).join("")}</div></div>`).join("");
+$("#dots").innerHTML=SL.map((s,i)=>`<button aria-label="${s[0]}" data-i="${i}"></button>`).join("");
+let si=0,tm;function go(i){si=i;document.querySelectorAll(".hs").forEach((e,j)=>e.classList.toggle("on",j==i));document.querySelectorAll("#dots button").forEach((e,j)=>e.classList.toggle("on",j==i));clearInterval(tm);if(!matchMedia("(prefers-reduced-motion:reduce)").matches)tm=setInterval(()=>go((si+1)%3),7000)}
+$("#dots").onclick=e=>{const b=e.target.closest("button");if(b)go(+b.dataset.i)};go(0);
+/* catalog */
+function setCat(c){cat=c;render()}
+function list(){let r=P.filter(p=>(cat=="all"||p.tags.includes(cat))&&(!q||(p.n+" "+p.tags.join(" ")+" "+(G[p.tags[0]]||"")).toLowerCase().includes(q)));
+if(sort=="n")r.sort((a,b)=>a.n.localeCompare(b.n));if(sort=="pa")r.sort((a,b)=>(a.pr??1e9)-(b.pr??1e9));if(sort=="pd")r.sort((a,b)=>(b.pr??-1)-(a.pr??-1));return r}
+function card(p){const pr=p.pr?`<span class="pr">Mulai dari ${rp(p.pr)}</span>`:`<span class="pr">Harga berdasarkan permintaan</span>`;
+return `<article class="card pc"><div class="pi" style="background:${COLORS[p.c]}" data-d="${p.id}" tabindex="0" role="button" aria-label="Detail ${p.n}"><span class="badge">${p.b}</span>${svg(p.t,"#fff")}<button class="wl ${wl[p.id]?"on":""}" data-w="${p.id}" aria-label="Wishlist ${p.n}" aria-pressed="${!!wl[p.id]}"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-8-5.5-8-11a4.500 4.500 0 0 1 8-2.800A4.500 4.500 0 0 1 20 10c0 5.500-8 11-8 11Z"/></svg></button></div>
+<div class="pb"><h3>${p.n}</h3><small>${p.s}</small><small>Opsi: logo &amp; warna custom</small>${pr}<small>MOQ ${p.moq} pcs · harga contoh</small>
+<div class="row"><button class="btn s" data-d="${p.id}">Lihat Detail</button><button class="btn p" data-a="${p.id}">${p.pr?"Tambah ke Keranjang":"Minta Penawaran"}</button></div></div></article>`}
+function render(){const r=list();$("#grid").innerHTML=r.length?r.map(card).join(""):'<p>Tidak ada produk yang cocok. Coba kata kunci atau kategori lain.</p>';$("#cnt").textContent=r.length+" produk";
+$("#side").innerHTML=CATS.map(c=>`<li><button data-c="${c[0]}" class="${c[0]==cat?"on":""}"><span aria-hidden="true">${c[2]}</span>${c[1]}</button></li>`).join("");
+const rf=$("#rf .on")?.dataset.f||"all";$("#rg").innerHTML=P.filter(p=>rf=="all"||p.tags.includes(rf)).map(card).join("");
+$("#wc").textContent=Object.keys(wl).length;$("#cc").textContent=Object.values(cart).reduce((a,b)=>a+b,0)}
+$("#sort").onchange=e=>{sort=e.target.value;render()};
+$("#side").addEventListener("click",e=>{const b=e.target.closest("[data-c]");if(b)setCat(b.dataset.c)});
+document.addEventListener("click",e=>{
+const w=e.target.closest("[data-w]");if(w){e.stopPropagation();const id=w.dataset.w;wl[id]?delete wl[id]:wl[id]=1;SV("cp_wl",wl);render();toast(wl[id]?"Ditambahkan ke wishlist":"Dihapus dari wishlist");return}
+const a=e.target.closest("[data-a]");if(a){add(+a.dataset.a);return}
+const d=e.target.closest("[data-d]");if(d)openM(+d.dataset.d)});
+document.addEventListener("keydown",e=>{if(e.key==="Enter"&&e.target.matches(".pi"))openM(+e.target.dataset.d);if(e.key==="Escape")closeAll()});
+function add(id){const p=P.find(x=>x.id==id);if(!p.pr){wa(`Halo CUSPACK, saya ingin meminta penawaran untuk: ${p.n} (${p.s}). Jumlah perkiraan: ...`);return}
+cart[id]=(cart[id]||0)+(p.moq>1&&!cart[id]?p.moq:1)*0+1;SV("cp_cart",cart);render();drawCart();toast(p.n+" ditambahkan ke keranjang")}
+function drawCart(){const ids=Object.keys(cart);let sum=0;$("#items").innerHTML=ids.length?ids.map(id=>{const p=P.find(x=>x.id==id),n=cart[id];sum+=p.pr*n;return `<div class="ci"><div class="t" style="background:${COLORS[p.c]}">${svg(p.t,"#fff")}</div><div><b style="font-size:.92rem">${p.n}</b><div class="note">${rp(p.pr)} · MOQ ${p.moq}</div><div class="qty"><button data-q="${id}" data-v="-1" aria-label="Kurangi">−</button><span>${n}</span><button data-q="${id}" data-v="1" aria-label="Tambah">+</button></div></div><button data-x="${id}" aria-label="Hapus">🗑</button></div>`}).join(""):'<p style="padding:20px 0">Keranjang masih kosong. Pilih produk dari katalog.</p>';
+$("#tot").innerHTML=ids.length?`<b>Estimasi: ${rp(sum)}</b><div class="note">Estimasi per unit contoh, belum termasuk custom &amp; MOQ.</div>`:"";$("#co").disabled=!ids.length}
+$("#drawer").addEventListener("click",e=>{const q=e.target.closest("[data-q]"),x=e.target.closest("[data-x]");if(q){const id=q.dataset.q;cart[id]+=+q.dataset.v;if(cart[id]<1)delete cart[id]}if(x)delete cart[x.dataset.x];if(q||x){SV("cp_cart",cart);drawCart();render()}});
+$("#co").onclick=()=>wa("Halo CUSPACK, saya ingin meminta penawaran:\n"+Object.keys(cart).map(id=>{const p=P.find(x=>x.id==id);return `- ${p.n} x${cart[id]}`}).join("\n"));
+function openCart(){drawCart();$("#drawer").classList.add("on");$("#ov").classList.add("on")}
+function closeAll(){["#drawer","#modal","#ov"].forEach(s=>$(s).classList.remove("on"))}
+$("#cb").onclick=openCart;$("#cx").onclick=closeAll;$("#ov").onclick=closeAll;
+$("#wlb").onclick=()=>{const n=Object.keys(wl).length;if(!n)return toast("Wishlist masih kosong");$("#q").value="";q="";cat="all";render();toast(n+" produk di wishlist (ditandai ♥)");$("#katalog").scrollIntoView()};
+function openM(id){const p=P.find(x=>x.id==id);$("#modal").innerHTML=`<div style="text-align:right"><button class="ib" id="mx" aria-label="Tutup" style="margin-left:auto">✕</button></div><div class="mg"><div class="prev" style="background:${COLORS[p.c]}">${svg(p.t,"#fff","180px")}</div><div><span class="badge" style="position:static">${p.b}</span><h3 style="margin:10px 0">${p.n}</h3><p style="color:var(--muted)">${p.s}. Tersedia opsi cetak logo dan pilihan warna. Material, finishing, dan dimensi dikonfirmasi bersama tim CUSPACK.</p><p class="pr">${p.pr?"Mulai dari "+rp(p.pr)+" (harga contoh)":"Harga berdasarkan permintaan"}</p><p class="note">MOQ contoh: ${p.moq} pcs. Harga dapat berubah sesuai material, jumlah, dan kebutuhan custom.</p><button class="btn p" data-a="${p.id}">${p.pr?"Tambah ke Keranjang":"Minta Penawaran"}</button> <button class="btn s" data-wa="Halo CUSPACK, saya tertarik dengan ${p.n}. Bisa dibantu spesifikasinya?">Tanya via WhatsApp</button></div></div>`;
+$("#modal").classList.add("on");$("#ov").classList.add("on");$("#mx").onclick=closeAll;$("#mx").focus()}
+/* showcase etc */
+const SC=[["Skincare Packaging","Jar, serum, dan tube untuk rangkaian perawatan kulit.","jar","#A7B9A0"],["Cosmetic Packaging","Compact dan wadah makeup dengan tampilan elegan.","compact","#E8CFC8"],["Haircare Packaging","Pump bottle dan botol untuk perawatan rambut.","pump","#E9DED2"],["Bodycare & Fragrance Packaging","Botol parfum, lip balm, dan wadah bodycare.","perf","#D5DDCC"]];
+const SKC=["skincare","cosmetic","haircare","bodycare"];
+$("#showcase").innerHTML=SC.map((s,i)=>`<div class="sk" style="background:${s[3]};color:#17302a"><div><h3>${s[0]}</h3><p>${s[1]}</p><a class="btn p" href="#katalog" onclick="setCat('${SKC[i]}')">Jelajahi Produk</a></div>${svg(s[2],"#fff")}</div>`).join("");
+const W=[["✎","Custom Design","Kemasan disesuaikan dengan identitas brand."],["❖","Pilihan Material","Berbagai pilihan bahan dan bentuk kemasan."],["⇅","MOQ Fleksibel","Kuantitas berdasarkan produk dan kapasitas produksi."],["✔","Quality Control","Pemeriksaan kualitas sebelum pengiriman."],["☏","Konsultasi Profesional","Bantuan memilih spesifikasi kemasan."],["➜","Pengiriman","Dukungan pengiriman sesuai jangkauan layanan."]];
+$("#why").innerHTML=W.map(w=>`<div class="card rv"><div class="ico">${w[0]}</div><b>${w[1]}</b><p>${w[2]}</p></div>`).join("");
+const SS=[["Pilih Produk","Tentukan jenis, ukuran, dan kebutuhan kemasan."],["Konsultasi dan Penawaran","Diskusikan jumlah pesanan, material, finishing, dan anggaran."],["Persetujuan Desain","Tinjau desain, spesifikasi, dan penawaran sebelum produksi."],["Produksi dan Pengiriman","Pesanan diproses setelah spesifikasi dan ketentuan disetujui."]];
+$("#steps").innerHTML=SS.map((s,i)=>`<div class="st rv" style="transition-delay:${i*120}ms"><div class="n">${i+1}</div><b>${s[0]}</b><p>${s[1]}</p></div>`).join("");
+const GI=[["Minimalist Skincare","jar",0,220],["Premium Cosmetic","compact",1,300],["Natural & Organic","tube",2,260],["Modern Haircare","pump",3,320],["Fragrance & Bodycare","perf",4,240],["Luxury Gift Box","box",5,280],["Minimalist Skincare","serum",6,300],["Premium Cosmetic","jar",7,220]];
+const GC=["#E8CFC8","#A7B9A0","#E9DED2","#D5DDCC","#EBD9D3","#C9D6C3","#F1E8DE","#D9C9B8"];
+const GF=["Semua",...new Set(GI.map(g=>g[0]))];let gf="Semua";
+function gal(){$("#gf").innerHTML=GF.map(f=>`<button class="${f==gf?"on":""}" data-g="${f}">${f}</button>`).join("");$("#gal").innerHTML=GI.filter(g=>gf=="Semua"||g[0]==gf).map(g=>`<div class="gi" tabindex="0" style="background:${GC[g[2]]};height:${g[3]}px">${svg(g[1],"#fff")}<span>${g[0]} · ${g[1]}</span></div>`).join("")}
+$("#gf").onclick=e=>{const b=e.target.closest("[data-g]");if(b){gf=b.dataset.g;gal()}};gal();document.querySelector("#gal").closest("section").id="portofolio";
+$("#rf").innerHTML=[["all","Semua"],["skincare","Skincare"],["cosmetic","Kosmetik"],["haircare","Haircare"],["bodycare","Bodycare"]].map((f,i)=>`<button data-f="${f[0]}" class="${i?"":"on"}">${f[1]}</button>`).join("");
+$("#rf").onclick=e=>{const b=e.target.closest("button");if(!b)return;document.querySelectorAll("#rf button").forEach(x=>x.classList.toggle("on",x==b));render()};
+/* custom design */
+let pc=0,pt="jar";const PT=[["jar","Jar"],["tube","Tube"],["serum","Botol"],["box","Box"]];
+function prv(){$("#prev").innerHTML=svg(pt,COLORS[pc]);$("#sw").innerHTML=COLORS.map((c,i)=>`<button style="background:${c}" class="${i==pc?"on":""}" data-s="${i}" aria-label="Warna ${i+1}"></button>`).join("");$("#pt").innerHTML=PT.map(t=>`<button class="${t[0]==pt?"on":""}" data-p="${t[0]}">${t[1]}</button>`).join("")}
+$("#sw").onclick=e=>{const b=e.target.closest("[data-s]");if(b){pc=+b.dataset.s;prv()}};$("#pt").onclick=e=>{const b=e.target.closest("[data-p]");if(b){pt=b.dataset.p;prv()}};prv();
+$("#fk").innerHTML=P.map(p=>`<option>${p.n}</option>`).join("");
+$("#cf").onsubmit=e=>{e.preventDefault();const n=$("#fn").value.trim(),w=$("#fw").value.replace(/[\s-]/g,""),m=$("#fm").value.trim();
+$("#e1").textContent=n.length<2?"Masukkan nama minimal 2 karakter.":"";$("#e2").textContent=/^(\+62|62|0)8\d{7,12}$/.test(w)?"":"Masukkan nomor WhatsApp yang valid, contoh 081234567890.";$("#e3").textContent=m.length<10?"Jelaskan kebutuhan minimal 10 karakter.":"";
+if(!$("#e1").textContent&&!$("#e2").textContent&&!$("#e3").textContent)wa(`Halo CUSPACK, saya ${n} (${w}). Tertarik: ${$("#fk").value}. Kebutuhan: ${m}`)};
+$("#tests").innerHTML=[["Placeholder: kutipan pelanggan akan ditampilkan di sini setelah ada testimoni asli.","[Nama Brand]","Skincare"],["Placeholder: ganti dengan testimoni terverifikasi.","[Nama Brand]","Kosmetik"],["Placeholder: tambahkan foto proyek bila tersedia.","[Nama Brand]","F&B"]].map(t=>`<div class="card rv"><q>${t[0]}</q><b>${t[1]}</b><div class="note">${t[2]} · contoh, bukan testimoni nyata</div></div>`).join("");
+const FQ=[["Apa itu custom packaging?","Kemasan yang dirancang atau disesuaikan dengan identitas brand Anda, mulai dari bentuk, warna, material, hingga cetak logo."],["Apakah CUSPACK menerima pesanan dalam jumlah kecil?","Kami berupaya fleksibel untuk UMKM. Kuantitas yang tersedia berbeda per produk, jadi silakan konfirmasi melalui tim CUSPACK."],["Berapa minimum order setiap produk?","MOQ bergantung pada jenis produk dan spesifikasi. Angka pada situs ini hanya contoh; hubungi tim untuk konfirmasi."],["Apakah saya bisa menggunakan logo sendiri?","Ya, logo brand Anda dapat diterapkan. Format file dan metode cetak dibahas saat konsultasi."],["Apakah tersedia konsultasi desain?","Tersedia. Gunakan formulir atau tombol WhatsApp untuk menjelaskan kebutuhan Anda."],["Berapa lama proses produksi?","Waktu produksi bergantung pada produk, jumlah, dan tingkat kustomisasi. Estimasi diberikan setelah spesifikasi dikonfirmasi."],["Apakah bisa memesan sampel?","Ketersediaan dan ketentuan sampel dikonfirmasi oleh tim CUSPACK sesuai produk yang Anda pilih."],["Apakah melayani pengiriman ke luar kota?","Kami mendukung pengiriman sesuai jangkauan layanan. Tanyakan tujuan Anda untuk informasi detail."],["Bagaimana cara mendapatkan penawaran harga?","Pilih produk, klik Minta Penawaran atau isi formulir konsultasi, lalu sampaikan jumlah, material, dan finishing yang diinginkan."]];
+$("#faqs").innerHTML=FQ.map(f=>`<details><summary>${f[0]}</summary><p>${f[1]}</p></details>`).join("");
+$("#fcat").innerHTML=["Skincare","Kosmetik","Haircare","Bodycare","Box Packaging"].map((c,i)=>`<li><a href="#katalog" onclick="setCat('${["skincare","cosmetic","haircare","bodycare","box"][i]}')">${c}</a></li>`).join("");
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target)}}),{threshold:.15});
+render();drawCart();document.querySelectorAll(".rv").forEach(e=>io.observe(e));
+</script>
+</body>
+</html>
